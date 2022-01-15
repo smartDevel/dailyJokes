@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Helmet} from 'react-helmet'
+import styles from './App.module.css';
+import AppBar from './components/AppBar';
+import smile from './smile.png';
+import Text from './components/Text'
+import BadJokesViewer from './components/BadJokesViewer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.app}>
+        <Helmet>
+          <title>BadJokes</title>
+          <meta name="description" content="The world's #1 source for bad jokes." />
+          <link rel="icon" href={smile} />
+        </Helmet>
+        <AppBar>
+          <AppBar.Item path="javascript:alert('No point in that...');">Login</AppBar.Item>
+          <AppBar.Item path="https://bad-jokes-blog.netlify.app/">Blog</AppBar.Item>
+          <AppBar.Logo>
+            <Text size="lg">BadJokes </Text>
+            <img style={{height: '39px'}} src={smile} alt="smile logo"></img>
+          </AppBar.Logo>
+        </AppBar>
+        <div className={styles.main}>
+          <BadJokesViewer />
+        </div>
     </div>
   );
 }

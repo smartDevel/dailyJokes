@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+.base {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  outline: none;
+  transition: background-color 0.5s, border 0.5s;
+   
+}
+
+.base:active {
+  border-color: #313131;
+  background-color: #fff;
+  color: #000;
+}
+.base:disabled{
+  border-color: #a5a5a5;
+  background-color: #a79e9e;
+}
+
+.primary {
+    border: solid 7px #ab3636;
+    background-color: #ab3636;
+      
+  }
+  .primary:hover {
+    border-color: #8b1b1b;
+    background-color: #8b1b1b;
+  }
+.secondary {
+    border: solid 7px #363eab;
+    background-color: #363eab;
+      
+  }
+  .secondary:hover {
+    border-color: #434cc5;
+    background-color: #434cc5;
+  }
