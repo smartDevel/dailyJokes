@@ -13,7 +13,8 @@ const DailyJokesViewer = () => {
     const getJoke = async () => {
         setIsLoading(true);
         try {
-            let res = await fetch('https://sv443.net/jokeapi/v2/joke/Any?blacklistFlags=racist&type=single');
+            // let res = await fetch('https://sv443.net/jokeapi/v2/joke/Any?blacklistFlags=racist&type=single');
+            let res = await fetch('https://sv443.net/jokeapi/v2/joke/Any?lang=en&blacklistFlags=nsfw,racist,sexist,explicit&type=single');
             let data = await res.json();
             const dataArr = data.joke.split('\n');
             setJoke(dataArr);
