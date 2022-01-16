@@ -1,12 +1,12 @@
 
 import React, {useState, useEffect} from 'react'
-import styles from './BadJokesViewer.module.css';
+import styles from './DailyJokesViewer.module.css';
 import Card from '../Card';
 import Text from '../Text';
 import Button from '../Button'
 
 
-const BadJokesViewer = () => {
+const DailyJokesViewer = () => {
     const [joke, setJoke] = useState(['Loading...']);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -45,4 +45,4 @@ const BadJokesViewer = () => {
     )
 }
 
-export default BadJokesViewer;
+export default DailyJokesViewer;

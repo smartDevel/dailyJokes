@@ -5,7 +5,7 @@ import styles from './AppBar.module.css';
 export default class AppBar extends Component {
 
     static Item = ({path, children}) => {
-        return <li><a href={path}><Text size='lg'>{`[${children}]`}</Text></a></li>
+        return <li><a href={path} target="_blank" rel="noopener noreferrer"><Text size='lg'>{`[${children}]`}</Text></a></li>
     }
         
 
